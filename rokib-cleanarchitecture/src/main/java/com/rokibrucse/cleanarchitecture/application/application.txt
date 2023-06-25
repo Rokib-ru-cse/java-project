@@ -1,0 +1,43 @@
+In Clean Architecture, the application layer is responsible for coordinating the different parts 
+of the system and providing a high-level interface for the outer layers to interact with. 
+It typically includes use case implementations, which are the specific actions that the application 
+can perform, such as creating a new user, viewing a list of products, or processing a payment.
+
+Examples of things you can place inside the application layer in Clean Architecture are:
+
+Use case implementation: Classes that implement the business logic, such as creating a new user, 
+viewing a list of products, or processing a payment.
+Interactors: Classes that handle the coordination of multiple use cases, and sometimes include 
+additional logic.
+Services: Classes that provide functionality that is used by multiple use cases, such as sending email, 
+or processing image.
+Entities: Domain-specific model classes that encapsulate the business logic and validation.
+Exception and error handling: handling errors from lower layer and throwing it to upper layer with 
+proper messages.
+The application layer is the innermost layer of the Clean Architecture and is completely independent 
+from the infrastructure and interface layers. This means that it should not depend on any infrastructure 
+or interface-specific details and should be easy to test.
+-----------------------------------------------------
+use case
+-------------------------------------------------------
+"Use Cases" and "Services" are related concepts in software development, but they are not exactly the same thing.
+
+A "Use Case" is a specific action or interaction that a user can perform with the system. It represents a single, 
+meaningful unit of functionality, such as creating a new account, logging in, or ordering a product. Use cases are 
+the the heart of the business logic and represent the requirements of the system, they should be defined in terms of 
+what the system does from the user perspective.
+
+A "Service" is a broader concept that refers to a class or set of classes that implement some specific functionality in an application. 
+Services can be used to encapsulate complex business logic, and handle cross-cutting concerns such as logging, validation, or persistence.
+ Services are usually implementation details that provide an implementation for the usecases.
+
+In Clean Architecture, Use Cases define the business logic of an application and Services provide an implementation of it. 
+Use Cases are located in the "Application" layer and are responsible for the orchestration of the interactions of different components. 
+Services are located on the "Domain" layer and are responsible for implementing the usecases and keeping them independent of the external 
+resources.
+
+Services can be implemented to support one or more use cases, and a use case can be supported by one or more services.
+
+To sum up, Use Cases are the business logic that describes what the system does from the user perspective, whereas Services are 
+classes that provide an implementation for that logic. Use Cases are higher level concepts that define the requirements, 
+whereas Services are the implementation details that provide a solution for those requirements.

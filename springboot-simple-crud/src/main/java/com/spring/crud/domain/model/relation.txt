@@ -1,0 +1,3 @@
+classroom <-> teacher = one to one
+classroom <-> student = one to many
+course    <-> student = many to many

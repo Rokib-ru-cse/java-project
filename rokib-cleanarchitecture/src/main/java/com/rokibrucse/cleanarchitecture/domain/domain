@@ -1,0 +1,12 @@
+In the Clean Architecture, the "domain" layer refers to the core business logic of your application. 
+It should contain all of the classes and interfaces that encapsulate the rules and use cases of your application. 
+Specifically, it should contain:
+
+Entities: Classes that represent the core business objects or concepts in your application. 
+They should be completely independent of any external infrastructure or framework.
+Use cases: Classes or interfaces that define the specific actions or interactions that can be performed with the entities. 
+They should also be independent of any external infrastructure or framework, and should not contain any logic related to input or output.
+It is generally a good practice to limit access from the outer layers to the domain layer by using the least privilege principle, 
+domain should not be able to access any external libraries, database or any other external resources, and it should be accessible only through interfaces.
+
+In other words, the domain should be the heart of the application, it should contain the business logic and rules, should be testable, independent, and agnostic to the external resources.

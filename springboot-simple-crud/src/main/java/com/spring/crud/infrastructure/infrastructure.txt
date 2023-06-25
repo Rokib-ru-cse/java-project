@@ -1,0 +1,15 @@
+In Clean Architecture, the infrastructure layer includes all of the technical details of the application 
+such as the database, file storage, networking, and other infrastructure-specific implementations. 
+This layer communicates with the outer layers (such as the use case or presentation layers) 
+via interfaces, which allows the outer layers to remain unaware of the specific infrastructure 
+technologies being used.
+
+Examples of things you can place inside infrastructure in clean architecture are :
+
+Database : Repository implementation, query data and map data to entities
+File storage: Implement reading and writing file to the filesystem
+Networking: Implementing http calls and api clients
+Push Notifications : send/receive push notifications.
+Logging : Send log data to a logging service.
+It is important to keep the infrastructure layer as thin as possible, so that it is easy to test and 
+replace with different implementations.
