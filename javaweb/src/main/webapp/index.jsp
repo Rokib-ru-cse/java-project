@@ -50,6 +50,17 @@
           </tr>
         </table>
     </form>
+
+   <%!
+   int var1 = 100;
+    int var2 =200;
+    public int sum(){
+        return var1+var2;
+    }
+
+   %>
+    <h1> sum = <% out.println(sum()); %></h1>  <%--     scriplet tag --%>
+    <h1> sum = <%= sum()%></h1> <%-- expression tag --%>
 </div>
 </body>
 </html>

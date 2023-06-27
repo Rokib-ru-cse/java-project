@@ -33,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
             p.println("<h2>Gender : "+gender+"</h2>");
             p.println("<h2>Course : "+course+"</h2>");
             p.println("<h2>From Cookie : "+req.getCookies().toString()+"</h2>");
-
+ 
             req.setAttribute("data",1);
 
             RequestDispatcher dispatcher = req.getRequestDispatcher("/success");
