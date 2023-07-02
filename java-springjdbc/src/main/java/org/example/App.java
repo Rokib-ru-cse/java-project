@@ -10,12 +10,15 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        User user = new User(23,"xxx", "sadin@gmail.com", "gender", "1111");
-        ApplicationContext context = new AnnotationConfigApplicationContext(JDBCConfig.class);
-        UserDao userDao = (UserDao) context.getBean("getUserDao");
-        List<User> user1 =  userDao.getUsers();
-        for (User u:user1) {
-            System.out.println(u);
-        }
+//        User user = new User(23,"xxx", "sadin@gmail.com", "gender", "1111");
+//        ApplicationContext context = new AnnotationConfigApplicationContext(JDBCConfig.class);
+//        UserDao userDao = (UserDao) context.getBean("getUserDao");
+//        List<User> user1 =  userDao.getUsers();
+//        for (User u:user1) {
+//            System.out.println(u);
+//        }
+
+        
+
     }
 }

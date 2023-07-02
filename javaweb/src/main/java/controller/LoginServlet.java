@@ -17,6 +17,5 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
         writer.println("<h1>xxxxxxxxxxxxxxxxxxx</h1>");
-
     }
 }

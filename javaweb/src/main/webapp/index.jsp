@@ -1,9 +1,12 @@
 <%--page directives --%>
 <%@page contentType="text/html; ISO-8859-1" %>
-<%@page import="java.util.Random,java.util.ArrayList" %>
-<%@page isErrorPage="true" %>
-<%@page session="false" %>
+<%--<%@page import="java.util.Random,java.util.ArrayList" %>--%>
+<%@page errorPage="ErrorPage.jsp" %>
+<%--<%@page session="false" %>--%>
 <%--<%@page extends="" %>--%>
+
+<%--taglib directive--%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
@@ -13,10 +16,12 @@
 <body>
 
 <%--include directive--%>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp" %>
+
+<c:set var="name" value="rokib"></c:set>
 
 <div class="container" style="width:60%;margin-left:auto">
-    <h1>My Form</h1>
+    <h1>My Form <c:out value="${name}"></c:out></h1>
     <form action="RegisterServlet" method="post">
         <table>
             <tr>
@@ -65,10 +70,10 @@
     <%-- declarative tag --%>
     <%!
         int var1 = 100;
-        int var2 = 200;
+        int var2 = 0;
 
         public int sum() {
-            return var1 + var2;
+            return var1 / var2;
         }
 
     %>

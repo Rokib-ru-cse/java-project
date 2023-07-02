@@ -22,7 +22,7 @@ public class JDBCConfig {
         d.setDriverClassName("com.mysql.cj.jdbc.Driver");
         d.setUrl("jdbc:mysql://localhost:3306/javafirst");
         d.setUsername("root");
-        d.setPassword("");
+        d.setPassword("1234");
         return d;
     }
 
