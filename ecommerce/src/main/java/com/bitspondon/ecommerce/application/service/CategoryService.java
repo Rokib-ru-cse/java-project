@@ -1,2 +1,4 @@
-package com.bitspondon.ecommerce.application.service;public interface CategoryService {
+package com.bitspondon.ecommerce.application.service;
+
+public interface CategoryService {
 }
