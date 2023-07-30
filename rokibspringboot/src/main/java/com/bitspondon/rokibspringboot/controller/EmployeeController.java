@@ -4,6 +4,7 @@ import com.bitspondon.rokibspringboot.entity.Employee;
 import com.bitspondon.rokibspringboot.pizza.Pizza;
 import com.bitspondon.rokibspringboot.pizza.VegPizza;
 import com.bitspondon.rokibspringboot.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.EnableCaching;
@@ -33,7 +34,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<Employee> saveEmployees(@RequestBody Employee employee){
+    public ResponseEntity<Employee> saveEmployees(@Valid @RequestBody Employee employee){
         return  service.saveEmployee(employee);
     }
 
