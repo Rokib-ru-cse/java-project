@@ -5,22 +5,28 @@ import com.bitspondon.rokibspringboot.pizza.Pizza;
 import com.bitspondon.rokibspringboot.pizza.VegPizza;
 import com.bitspondon.rokibspringboot.service.EmployeeService;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Scope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/employe")
 @EnableCaching
+//@Scope(value = WebApplicationContext.SCOPE_REQUEST)
 public class EmployeeController {
 
     private final Pizza pizza;
 
     private final EmployeeService service;
+
+
 
     public EmployeeController(@Qualifier("vegPizza") Pizza pizza, EmployeeService service) {
         this.pizza = pizza;
@@ -29,13 +35,13 @@ public class EmployeeController {
 
     @GetMapping
 //    @Cacheable("products",)
-    public ResponseEntity<List<Employee>> employees(){
-        return  service.getEmployees();
+    public ResponseEntity<List<Employee>> employees() {
+        return service.getEmployees();
     }
 
     @PostMapping
-    public ResponseEntity<Employee> saveEmployees(@Valid @RequestBody Employee employee){
-        return  service.saveEmployee(employee);
+    public ResponseEntity<Employee> saveEmployees(@Valid @RequestBody Employee employee) {
+        return service.saveEmployee(employee);
     }
 
 }

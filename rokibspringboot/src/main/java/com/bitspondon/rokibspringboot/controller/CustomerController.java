@@ -9,17 +9,21 @@ import org.springframework.batch.core.repository.JobExecutionAlreadyRunningExcep
 import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.BeanDefinitionDsl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.WebApplicationContext;
 
 @RestController
-
+//@Scope(value = WebApplicationContext.SCOPE_REQUEST)
 public class CustomerController {
 
     @Autowired
     private JobLauncher jobLauncher;
     @Autowired
     private Job job;
+
 
     @GetMapping("/importCustomers")
     public void importCsvToDBJob() {

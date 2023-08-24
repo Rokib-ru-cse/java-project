@@ -32,7 +32,7 @@ public class RokibspringbootApplication {
     }
 
 
-    //    @Scheduled(fixedDelay = 2000) /
+//    @Scheduled(fixedDelay = 2000) /
 //    @Scheduled(cron = "*/2 * * * * *") //crontab.guru
 //    public void job1() {
 //        System.out.println("job 1 = " + new Date());
