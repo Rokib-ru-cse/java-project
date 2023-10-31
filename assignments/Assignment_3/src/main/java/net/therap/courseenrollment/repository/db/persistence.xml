@@ -1,0 +1,23 @@
+<persistence>
+    <persistence-unit name="dbconfig">
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/courseenrollment"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="1234"/>
+
+            <property name="db.max.connection.pool" value="10"/>
+
+            <property name="Class.Course" value="courses"/>
+            <property name="Class.User" value="users"/>
+            <property name="Class.CourseUser" value="coursesusers"/>
+
+            <property name="basePackage" value="net.therap.courseenrollment"/>
+            <property name="viewPath" value="/view"/>
+
+            <property name="0" value="exit"/>
+            <property name="1" value="login"/>
+            <property name="2" value="rgister"/>
+            <property name="3" value=""/>
+        </properties>
+    </persistence-unit>
+</persistence>
